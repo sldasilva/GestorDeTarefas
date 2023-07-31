@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    
+    @if (!string.IsNullOrEmpty(User.Identity.Name))
+    {
+        <h1 class="display-4">Muito bem vindo(a),</h1>
+
+        <h2>"@User.Identity.Name"</h2>
+        <br />
+        <h3> esse é um sistema para gerenciar tarefas. Fique a vontade para criar as suas!</h3>
+    }else{
+        <h1>Gestor de tarefas</h1>
+        <br />
+        <h3> esse é um sistema para gerenciar tarefas. Faça seu <a href="Identity/Account/Register">registro</a> e fique a vontade para criar as suas!</h3>
+    }
+</div>
